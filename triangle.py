@@ -9,6 +9,7 @@ def area(side_a, side_b, side_c):
         * (semi_perimeter - side_c)
     ) ** 0.5
 
+
 def perimeter(side_a, side_b, side_c):
     assert all(x > 0 for x in [side_a, side_b, side_c]), "Side lengths must be positive"
     return side_a + side_b + side_c
