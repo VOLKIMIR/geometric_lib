@@ -4,11 +4,7 @@ import triangle
 
 figures = ["circle", "square", "triangle"]
 functions = ["perimeter", "area"]
-required_sizes = {
-    "circle": 1,
-    "square": 1,
-    "triangle": 3
-}
+required_sizes = {"circle": 1, "square": 1, "triangle": 3}
 
 
 def calculate(figure, function, size):
@@ -25,16 +21,26 @@ if __name__ == "__main__":
     sizes = []
 
     while selected_figure not in figures:
-        selected_figure = input(f"Enter figure name (available: {figures}):\n").strip().lower()
+        selected_figure = (
+            input(f"Enter figure name (available: {figures}):\n").strip().lower()
+        )
 
     while selected_function not in functions:
-        selected_function = input(f"Enter function name (available: {functions}):\n").strip().lower()
+        selected_function = (
+            input(f"Enter function name (available: {functions}):\n").strip().lower()
+        )
 
     required_size_count = required_sizes[selected_figure]
     while len(sizes) != required_size_count:
         try:
-            sizes = list(map(float, input(
-                f"Enter {required_size_count} size(s) separated by space for {selected_figure}:\n").split()))
+            sizes = list(
+                map(
+                    float,
+                    input(
+                        f"Enter {required_size_count} size(s) separated by space for {selected_figure}:\n"
+                    ).split(),
+                )
+            )
         except ValueError:
             print("Invalid input. Please enter numbers only.")
 
