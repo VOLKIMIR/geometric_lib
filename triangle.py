@@ -3,7 +3,7 @@ def area(a, b, c):
 
     p = (side_a + side_b + side_c) / 2
     return (
-        p * (p - a) * (p - b) * (p - c)
+            p * (p - a) * (p - b) * (p - c)
     ) ** 0.5
 
 
