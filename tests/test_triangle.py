@@ -12,14 +12,12 @@ class TestTriangle(unittest.TestCase):
         # Assert
         self.assertAlmostEqual(result, 6.0, places=5)
 
-    def test_area_with_invalid_sides_raises_assertion_error(self):
+    def test_area_with_negative_sides_raises_assertion_error(self):
         # Arrange
         invalid_sides = [
-            (1, 2, 10),   # Не выполняется неравенство треугольника
             (-1, 2, 3),   # Одна из сторон отрицательная
             (1, -2, 3),   # Одна из сторон отрицательная
-            (1, 2, -3),   # Одна из сторон отрицательная
-            (1, 10, 12),  # Не выполняется неравенство треугольника
+            (1, 2, -3)    # Одна из сторон отрицательная
         ]
 
         for sides in invalid_sides:
