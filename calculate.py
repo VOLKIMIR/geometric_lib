@@ -22,12 +22,12 @@ if __name__ == "__main__":
 
     while selected_figure not in figures:
         selected_figure = (
-            input(f"Enter figure name (available: {figures}):\n").strip().lower()
+            input(f"Enter name: {figures}):\n").strip().lower()
         )
 
     while selected_function not in functions:
         selected_function = (
-            input(f"Enter function name (available: {functions}):\n").strip().lower()
+            input(f"Enter name: {functions}):\n").strip().lower()
         )
 
     required_size_count = required_sizes[selected_figure]
@@ -37,7 +37,7 @@ if __name__ == "__main__":
                 map(
                     float,
                     input(
-                        f"Enter {required_size_count} size(s) separated by space for {selected_figure}:\n"
+                        f"Enter {required_size_count} size(s) {selected_figure}:\n"
                     ).split(),
                 )
             )
