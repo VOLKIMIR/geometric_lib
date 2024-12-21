@@ -10,7 +10,9 @@ class TestCalculate(unittest.TestCase):
         size = [3]
 
         # Act
-        with self.assertRaises(NameError):  # circle module is not imported dynamically in `calculate.py`
+        with self.assertRaises(
+            NameError
+        ):  # circle module is not imported dynamically in `calculate.py`
             calculate(figure, function, size)
 
     def test_calculate_square_perimeter(self):
@@ -20,7 +22,9 @@ class TestCalculate(unittest.TestCase):
         size = [5]
 
         # Act
-        with self.assertRaises(NameError):  # square module is not imported dynamically in `calculate.py`
+        with self.assertRaises(
+            NameError
+        ):  # square module is not imported dynamically in `calculate.py`
             calculate(figure, function, size)
 
     def test_invalid_figure_raises_assertion_error(self):
