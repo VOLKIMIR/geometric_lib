@@ -1,7 +1,8 @@
+def area(side):
+    assert side >= 0, "Side length cannot be negative"
+    return side * side
 
-def area(a):
-    return a * a
 
-
-def perimeter(a):
-    return 4 * a
+def perimeter(side):
+    assert side >= 0, "Side length cannot be negative"
+    return 4 * side
